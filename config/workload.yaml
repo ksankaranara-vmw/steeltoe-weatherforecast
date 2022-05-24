@@ -16,6 +16,6 @@ spec:
         autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/sample-accelerators/steeltoe-weatherforecast
+      url: https://github.com/hananiel/steeltoe-weatherforecast
       ref:
-        branch: main
+        branch: alv
