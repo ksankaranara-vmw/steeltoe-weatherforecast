@@ -7,6 +7,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Steeltoe.Management.Endpoint;
+using Steeltoe.Management.Endpoint.ThreadDump;
 using Steeltoe.Management.Tracing;
 
 namespace Sample
@@ -24,6 +25,7 @@ namespace Sample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAllActuators(Configuration);
+            services.AddThreadDumpActuator(Configuration);
             services.AddDistributedTracingAspNetCore();
             services.AddControllers();
             services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "Sample", Version = "v1" }); });
